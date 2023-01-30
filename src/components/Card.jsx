@@ -13,7 +13,7 @@ const Card = ({ title, img, status, oldPrice, currPrice }) => {
     try {
       await axios
         .get("https://reqres.in/api/products/3")
-        .then((resp) => setData(resp.data));
+        .then((resp) => setData(resp.data.data));
     } catch (error) {
       alert(error);
     } finally {
