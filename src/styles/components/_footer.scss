@@ -1,0 +1,64 @@
+.footer {
+  background: #eceaea;
+  // .footer__left
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+
+  // .footer__logo
+
+  &__logo {
+  }
+
+  // .footer__contacts
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 51px;
+  }
+
+  // .footer__tel
+
+  &__tel {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  // .footer__location
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+}
+
+.tel {
+  // .tel__icon
+
+  &__icon {
+  }
+
+  // .tel__name
+
+  &__name {
+  }
+}
+.name {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #555555;
+}
+.icon {
+}

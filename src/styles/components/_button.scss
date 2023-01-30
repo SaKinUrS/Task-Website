@@ -1,0 +1,30 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #ffffff;
+  background: #403432;
+  transition: background 0.2s linear;
+  width: 118px;
+  padding: 14px 10px 13px;
+  text-align: center;
+  &:disabled {
+    color: #f4f6f9;
+    background: #c1b4b1;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: #f4f6f9;
+      background: #776763;
+    }
+  }
+  &.bought {
+    background: #5b3a32;
+    width: 118px;
+  }
+}

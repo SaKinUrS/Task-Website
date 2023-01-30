@@ -1,0 +1,23 @@
+.menu {
+  // .menu__item
+  display: flex;
+  gap: 48px;
+
+  &__item {
+  }
+
+  // .menu__link
+
+  &__link {
+    font-size: 14px;
+    color: #343030;
+    line-height: 1.5;
+    font-weight: 400;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
