@@ -7,10 +7,9 @@ import img3 from "./img/store/03.png";
 import img4 from "./img/store/04.png";
 import Footer from "./components/Footer";
 import { useState } from "react";
-import Loader from "./components/UI/Loader";
 import Card from "./components/Card";
 
-const pictures = [
+export const pictures = [
   {
     id: 1,
     title: "«Рождение Венеры» Сандро Боттичелли",
@@ -65,6 +64,8 @@ function App() {
                   )
                   .map((picture) => (
                     <Card
+                      items={pictures}
+                      item={picture}
                       key={picture.id}
                       title={picture.title}
                       img={picture.img}

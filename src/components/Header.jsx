@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "./../img/logo-header.png";
 import Nav from "./Nav";
-import Button from "./UI/Button";
 import Input from "./UI/Input";
 
 const Header = ({ searchQuery, setSearchQuery }) => {
@@ -16,7 +15,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
         </div>
         <div className="header__search-box search-box">
           <Input searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-          <Button>Найти</Button>
+          <button className="search-box__btn btn">Найти</button>
         </div>
       </div>
     </header>

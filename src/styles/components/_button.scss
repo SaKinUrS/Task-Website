@@ -1,7 +1,7 @@
 .btn {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 4px;
   align-items: center;
   font-size: 14px;
   line-height: 1.5;
@@ -9,7 +9,7 @@
   color: #ffffff;
   background: #403432;
   transition: background 0.2s linear;
-  width: 118px;
+  width: 112px;
   padding: 14px 10px 13px;
   text-align: center;
   &:disabled {
