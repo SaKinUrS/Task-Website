@@ -12,7 +12,6 @@ const Card = ({ title, img, status, oldPrice, currPrice, item, id }) => {
   const [isBought, setIsBought] = useState(findIteminStorage(id));
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
-
   const fetchData = async () => {
     setIsLoading(true);
 
@@ -66,24 +65,30 @@ const Card = ({ title, img, status, oldPrice, currPrice, item, id }) => {
                 onClick={() => onClickBtn(id)}
                 className={` btn ${isBought ? "bought" : ""}`}
               >
-                {isBought && (
-                  <svg
-                    width="16"
-                    height="13"
-                    viewBox="0 0 16 13"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M14.5315 1.80937L5.63341 11.237L1.34814 7.19237"
-                      stroke="#F4F6F9"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                {isLoading ? (
+                  <Loader />
+                ) : isBought ? (
+                  <>
+                    <svg
+                      width="16"
+                      height="13"
+                      viewBox="0 0 16 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M14.5315 1.80937L5.63341 11.237L1.34814 7.19237"
+                        stroke="#F4F6F9"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    В корзине
+                  </>
+                ) : (
+                  "Купить"
                 )}
-                {isLoading ? <Loader /> : isBought ? "В корзину" : "Купить"}
               </button>
             </>
           )}
